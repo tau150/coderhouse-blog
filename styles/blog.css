@@ -4,9 +4,30 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
- body {
-    overflow-x: hidden;
- }
+ul.ui-autocomplete.ui-menu {
+    width: 190px;
+    z-index: 1000;
+    position: relative;
+    margin: 0 auto;
+}
+
+.ui-widget {
+    /*width: 80% !important;
+    display: block !important;
+    margin: 15px auto !important;*/
+    padding-bottom: 50px !important;
+    z-index: 30;
+    display: block;
+    margin: 0 auto;
+}
+
+.ui-widget input {
+    border: none;
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
 
 /* Toggle Styles */
 
@@ -21,10 +42,15 @@
 #wrapper.toggled {
     padding-left: 250px;
 }
-#selectable .ui-selecting { background: #EF305E; }
-  #selectable .ui-selected { background: #EF305E; color: white; }
 
-  
+#selectable .ui-selecting {
+    background: #EF305E;
+}
+
+#selectable .ui-selected {
+    background: #EF305E;
+    color: white;
+}
 
 #sidebar-wrapper {
     z-index: 1000;
@@ -56,7 +82,64 @@
     margin-right: -250px;
 }
 
+
 /* Sidebar Styles */
+
+.search-bar {
+    background: #000;
+    width: 100%;
+    height: 50px;
+}
+
+#sidebar-wrapper ul li {
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inputsComents input {
+    margin: 15px 0;
+}
+
+.inputsComents button {
+    margin: 15px 0;
+}
+
+#userInput {
+    margin: 10px 0;
+}
+
+.userComment {
+    font-weight: bold;
+    font-size: 11px;
+    /*margin-top: 30px;*/
+}
+
+.container-comments {
+    padding: 30px 0;
+    border-top: 1px solid #000;
+}
+
+.container-comments h4 {
+    font-size: 11px;
+}
+
+.container-comments p {
+    font-size: 11px;
+}
+
+.container-comments h4 {
+    */ font-weight: bold;
+}
+
+#sidebar-wrapper ul li:hover {
+    cursor: pointer;
+}
+
+#sidebar-wrapper ul {
+    margin-top: 150px;
+}
 
 .sidebar-nav {
     position: absolute;
@@ -65,13 +148,13 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top:110px;
+    margin-top: 110px;
 }
 
-h3{
-   text-align: center;
-   margin-top: 60px;
-   color: #fff;
+h3 {
+    text-align: center;
+    margin-top: 60px;
+    color: #fff;
 }
 
 .sidebar-nav li {
@@ -80,26 +163,38 @@ h3{
     color: #ECE0CF;
     border-radius: 50px;
     margin-left: 15px;
-   
+    text-overflow: ellipsis;
 }
 
 .sidebar-nav li a {
-     display: inline;
+    display: inline;
     text-decoration: none;
     color: #fff;
 }
 
-.sidebar-nav input{
-display: inline;
-margin-left: 40px;
-
+.sidebar-nav input {
+    display: inline;
+    margin-left: 40px;
 }
-
 
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.addCommentModal,
+.container-comments,
+.inputsComments {
+    display: none;
+}
+
+.addCommentModal span {
+    margin: 0 5px;
+}
+
+.addCommentModal {
+    padding: 0;
 }
 
 .sidebar-nav li a:active,
@@ -107,95 +202,76 @@ margin-left: 40px;
     text-decoration: none;
 }
 
-.sidebar-nav > .sidebar-brand {
+.sidebar-nav>.sidebar-brand {
     height: 65px;
     font-size: 18px;
     line-height: 60px;
 }
 
-.sidebar-nav > .sidebar-brand a {
+.sidebar-nav>.sidebar-brand a {
     color: #999999;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
+.sidebar-nav>.sidebar-brand a:hover {
     color: #fff;
     background: none;
 }
-
-
 
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
     }
-
     #wrapper.toggled {
         padding-left: 0;
     }
-
     #sidebar-wrapper {
         width: 250px;
     }
-
     #wrapper.toggled #sidebar-wrapper {
         width: 0;
     }
-
     #page-content-wrapper {
         padding: 20px;
         position: relative;
     }
-
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
     }
-
-    .btn-estados{
+    .btn-estados {
         margin: 10px 0;
-         float: left;
-         font-size:15px;
-        padding:0;
+        float: left;
+        font-size: 15px;
+        padding: 0;
         position: relative;
         z-index: 10;
         width: 25%;
     }
-    .btn-estados-instrucciones{
+    .btn-estados-instrucciones {
         padding: 0;
-    
-         font-size:18px;
-       
+        font-size: 18px;
     }
-
-    .btn-estados-instrucciones span{
+    .btn-estados-instrucciones span {
         margin: 0;
         padding: 0;
     }
-
-    .btn-estados-instrucciones:hover{
+    .btn-estados-instrucciones:hover {
         cursor: default;
     }
-    
-    .glyphicon-list{
+    .glyphicon-list {
         font-size: 20px;
     }
-
-    .estados p{
+    .estados p {
         display: inline !important;
         margin-left: 10px;
     }
-
-
-    .sidebar-brand{
+    .sidebar-brand {
         margin-top: 60px;
     }
-    
-    .postInput{
+    .postInput {
         width: 100%;
-       
     }
-
-    label{
-         margin-top: 20px;
+    label {
+        margin-top: 20px;
     }
 }
