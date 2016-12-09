@@ -84,11 +84,12 @@ var BlogModule = (function() {
     }
 
     function getAllPostsTags() {
-        var tags = [];
-        for (var i in posts) {
-            tags.push(posts[i].title);
-        }
-        return tags;
+
+        return posts.map(function(post) {
+            return post.title;
+        });
+
+    
     }
 
     // Publico

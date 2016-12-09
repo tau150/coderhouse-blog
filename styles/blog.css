@@ -28,6 +28,14 @@ ul.ui-autocomplete.ui-menu {
     display: block;
 }
 
+.fr-box.fr-basic .fr-element {
+    height: 200px !important;
+}
+
+.fr-element .fr-view p {
+    display: none !important;
+}
+
 
 /* Toggle Styles */
 

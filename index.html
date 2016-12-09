@@ -10,16 +10,23 @@
     <meta name="author" content="">
 
     <title>Simple Sidebar - Start Bootstrap Template</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Include Editor style. -->
+
+    <!-- Include Code Mirror. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0-rc.1/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0-rc.1/css/froala_style.min.css' rel='stylesheet' type='text/css' />
+
+
+
+
     <link href="styles/material-design.css" rel="stylesheet">
-
     <link href="styles/blog.css" rel="stylesheet">
-    <link href="styles/easy-autocomplete.min.css" rel="stylesheet">
-
-
-
-
 
 </head>
 
@@ -40,10 +47,10 @@
             <button type="button" id='btn-delete' class="btn btn-danger btn-estados"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
             <button type="button" id='btn-sort' class="btn btn-warning btn-estados"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span></button>
             <h3>Posts</h3>
-                <div class="ui-widget">
+            <div class="ui-widget">
 
-        <input id="tags" placeholder="Ingresa post...">
-    </div>
+                <input id="searchTitles" placeholder="Ingresa post...">
+            </div>
 
             <ul class="sidebar-nav" id="selectable">
 
@@ -142,7 +149,7 @@
                         <input class='postInput' maxlength="20" id='titleInput' type="text" name="title" value="">
 
                         <label for="bodyText">Postea</label>
-                        <textarea class="form-control postInput" id='bodyInput' rows="10" name="bodyText" value=""></textarea>
+                        <textarea class="form-control postInput" id='bodyInput' rows="20" name="bodyText" value=""></textarea>
 
 
                     </div>
@@ -193,26 +200,43 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+
+    <!-- Include Code Mirror. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+
+    <!-- Include Plugins. -->
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.growl.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="js/jquery.easy-autocomplete.min.js" type="text/javascript"></script>
-
-
     <link href="styles/jquery.growl.css" rel="stylesheet" type="text/css" />
-    <script src="js/tinymce.min.js" type="text/javascript"></script>
+    <!--<script src="js/tinymce.min.js" type="text/javascript"></script>
     <script>
         tinymce.init({
             selector: 'textarea'
         });
-    </script>
+    </script>-->
+
+    <!-- Include JS file. -->
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0-rc.1/js/froala_editor.min.js'></script>
+
+
+
     <script src="js/blog.js"></script>
     <script src="js/script.js"></script>
 
 
+    <script>
+        $(function() {
+            $('#bodyInput').froalaEditor();
+            $('#bodyInputEdit').froalaEditor();
 
+            // $('.modal-body').froalaEditor({
+            //     placeholderText: ''
+            // });
+        });
+    </script>
 </body>
 
 </html>
